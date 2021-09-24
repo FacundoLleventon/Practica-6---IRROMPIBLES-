@@ -1,0 +1,508 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$rojo: #c3191d;
+$negro: rgb(26, 25, 25);
+$negroclaro: #212529;
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.contenedor{
+    width: 80vw;
+    margin: auto;
+}
+
+
+
+    //    NAVBAR
+.navbar{
+    box-shadow:0 0 10px 0 black;
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+
+
+.redes{
+    color: white;
+}
+
+.categorias{
+    a{
+        transition: .5s ease all;
+        text-decoration: none;
+    }
+
+    a:hover{
+        transform: translateY(18px);
+        background-color: $rojo;
+        color: white !important;    }
+}
+
+// CAROUSEl
+header{
+    padding-top: 30px;
+    background-color: $negro;
+}
+
+
+.carousel {
+    max-width: 1000px;
+    margin: auto;
+
+    .carousel-caption{
+        background-color: rgba(0, 0, 0, 0.521);
+        
+    }
+
+   img{
+    width: auto;
+    max-height: 80vh;
+    object-fit: cover;
+   }
+
+   /*h5, p{
+       background: rgba(0, 0, 0, 0.384);
+   }*/
+}
+
+//  NOTICIAS CALIENTES
+.titulo-un{
+    margin: 40px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h3{
+        color: white;
+        font-size: 20px;
+        letter-spacing: 2px;
+
+        span{
+            color: $rojo;
+        }
+    }
+}
+
+.producto{
+    position: relative;
+    width: 100%;
+    padding-bottom: 10px;
+
+    .overlay{
+        width: 0%;
+        height: 96%;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        background: $rojo;
+        overflow: hidden;
+        transition: .5s ease;
+
+        .overlay-texto{
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            // white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.producto:hover .overlay{ /*o sea, que cuando el puntero interacciones con el producto, el overlay haga lo siguiente*/
+    width: 100%;
+    opacity: .8;
+}
+
+// REVIEWS
+.reviews{
+    background-color: $negro;
+    padding-bottom: 30px
+}
+
+.titulo-reviews{
+    border-top: solid 2px $rojo;
+    padding-top: 30px;
+
+    a{
+        text-decoration: none;
+        display: block;
+        width: 180px;
+        
+        p{
+            color: white;
+            font-size: 35px;
+            letter-spacing: -1px;
+            font-weight: 900;
+            width: 100px;
+            transition: .3s ease all;
+
+            &:hover{
+                color: $rojo;
+                letter-spacing: 3px;
+            }
+
+            span{
+                color: $rojo;
+            }
+        }
+    }
+}
+
+.card{
+    max-width: 700px;
+
+    a{
+        text-decoration: none;
+        
+        &:hover{
+            color: $rojo;
+        }
+    }
+
+    img{
+        height: 100%;
+        object-fit: cover;
+        transition: all ease-out 0.5s;
+
+        &:hover{
+            transform:scale(1.05);
+        }
+    }
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+    .tarjetas{
+        flex-direction: column;
+        width: 65%;
+    }
+
+    .aside{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        height: 450px;
+        margin-top: 200px;
+        border-left: solid 2px $rojo;
+        align-items: end;
+        
+        input{
+            margin: 0 auto;
+            width: 200px;
+            color: white;
+            background-color: $negroclaro;
+        }
+
+        h5{
+            color: $rojo;
+            margin: 100px auto 5px auto;
+        }
+
+        ul{
+            color: white;
+
+            li{
+                margin-bottom: 5px;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover{
+                        color:$rojo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// NOTICIAS E INFORMES
+.titulo-noticias{
+    border-top: solid 2px $rojo;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    a{
+        text-decoration: none;
+        display: block;
+        width: 180px;
+        
+        p{
+            color: white;
+            font-size: 30px;
+            letter-spacing: -1px;
+            font-weight: 900;
+            transition: .3s ease all;
+
+            &:hover{
+                color: $rojo;
+                letter-spacing: 3px;
+            }
+
+            span{
+                color: $rojo;
+            }
+        }
+    }
+}
+.contenedor3{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+    .tarjetas{
+        flex-direction: column;
+        width: 45%;
+        
+    }
+
+    .aside{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        max-height: 780px;
+        align-items: end;
+    }
+}
+
+/*   FOOTER   */
+footer{
+    display: flex;
+    background-color: $negroclaro;
+    color: white;
+    padding: 50px 0 0 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow:0 0 12px 0 $rojo;
+
+    .footer1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 0 30px 0;
+        justify-content: space-evenly;
+
+        .footer-a{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 33%;
+            padding: 40px 80px 0 80px;
+
+            p{
+                font-size: 15px;
+            }
+        }
+
+        .footer-b{
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            align-items: center;
+
+            p{
+                font-size: 20px;
+                font-style: italic;
+            }
+
+            img{
+                max-width: 250px;
+            }
+        }
+
+        .footer-c{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+
+            p{
+                border-bottom: solid 1px $rojo;
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
+
+                &:hover{
+                    color:$rojo;
+                }
+            }
+        }
+    }
+
+    .footer2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px 15px 0 15px;
+        justify-content: center;
+
+        p{
+            font-size: 13px;
+            color: #ccc;
+        }
+    }
+}
+
+
+
+// MEDIA QUERY
+@media (max-width: 1000px) {
+   .redes{
+    display:none;
+   }
+
+   .producto{
+
+    .overlay{
+        width: 100%;
+        height: 97%;
+        opacity: .8;
+
+        .overlay-texto{
+            font-size: 25px;
+            font-weight: 500;
+        }
+    }
+}
+  
+}
+
+@media (max-width: 739px){
+    .aside{
+        display: none !important;
+    }
+
+    //  NOTICIAS CALIENTES
+    .titulo-un{
+        margin: 40px 10px 0 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        h3{
+        color: white;
+        font-size: 20px;
+        letter-spacing: 2px;
+        }
+
+        span{
+            color: $rojo;
+        }
+    
+    }
+
+    .producto{
+
+        .overlay{
+            width: 100%;
+            height: 93%;
+            opacity: .8;
+
+            .overlay-texto{
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    /*  REVIEW  */
+    .titulo-reviews{
+        display: flex;
+        justify-content: center;
+
+        a{
+            p{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .contenedor2{
+        display: flex;
+        justify-content: center;
+
+        .tarjetas{
+            flex-direction: column;
+            width: 90%;
+        }
+    }
+
+    /*  TECNOLOGIA Y COBERTURAS  */
+    #tecnologia, #coberturas{
+        display: none;
+    }
+
+    .contenedor3{
+        display: flex;
+        justify-content: center;
+
+        .tarjetas{
+            flex-direction: column;
+            width: 90%;
+        }
+    }
+
+    /*   FOOTER   */
+    footer{
+        .footer1{
+            flex-direction: column;
+            align-content: center;
+
+            .footer-b{
+                order: 1;
+                width: 100%;
+
+                p{
+                    font-size: 18px;
+                }
+
+                img{
+                    max-width: 175px;
+                }
+            }
+
+            .footer-a{
+                order: 2;
+                width: 100%;
+                padding: 40px 30px;
+
+                p{
+                    text-align: justify;
+                    font-size: 14px;
+                }
+            }
+
+            .footer-c{
+                order: 3;
+                width: 100%;
+            }
+        }
+    }
+}
